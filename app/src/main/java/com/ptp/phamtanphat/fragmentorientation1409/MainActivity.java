@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity implements SendData{
     @Override
     public void RetriveData(Sinhvien sinhvien) {
         Fragment_Info_Sinhvien fragment_info_sinhvien = (Fragment_Info_Sinhvien) getFragmentManager().findFragmentById(R.id.fragmentinfosv);
-        fragment_info_sinhvien.GetDataSetText(sinhvien);
+        if (fragment_info_sinhvien != null && fragment_info_sinhvien.isInLayout()){
+            fragment_info_sinhvien.GetDataSetText(sinhvien);
+        }
+
+
     }
 }
