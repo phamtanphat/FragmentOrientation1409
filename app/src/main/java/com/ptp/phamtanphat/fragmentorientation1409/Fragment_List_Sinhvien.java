@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,7 @@ public class Fragment_List_Sinhvien extends ListFragment {
 
     ArrayList<Sinhvien> mangsinhvien;
     SinhvienAdapter sinhvienAdapter;
+    SendData sendData;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mangsinhvien = new ArrayList<>();
@@ -32,6 +34,13 @@ public class Fragment_List_Sinhvien extends ListFragment {
         mangsinhvien.add(new Sinhvien("Le Nguyen Tu","11A5","lnt11a1@gmail.com","Cao Lanh"));
         sinhvienAdapter = new SinhvienAdapter(getActivity(),android.R.layout.simple_list_item_1,mangsinhvien);
         setListAdapter(sinhvienAdapter);
+        sendData = (SendData) getActivity();
         return inflater.inflate(R.layout.fragment_list_sinhvien,container,false);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        sendData.RetriveData(mangsinhvien.get(position));
+        super.onListItemClick(l, v, position, id);
     }
 }
