@@ -12,4 +12,28 @@
         android:text="Ten sinh vien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#1667d1"
+        android:id="@+id/textviewlopsv"
+        android:layout_margin="3dp"
+        android:textSize="23sp"
+        android:text="11A1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#308e08"
+        android:id="@+id/textviewemailsv"
+        android:layout_margin="3dp"
+        android:textSize="23sp"
+        android:text="ntt@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#b99101"
+        android:id="@+id/textviewdiachisv"
+        android:layout_margin="3dp"
+        android:textSize="23sp"
+        android:text="Tp Ho Chi Minh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
